@@ -296,6 +296,13 @@ public class StatusBarNotificationPillStyle: NSObject {
     @objc public var shadowOffsetXY = CGPoint(x: 0, y: 2)
 }
 
+/// Defines the appearance of the pill, when using ``StatusBarNotificationBackgroundType/pill``
+@objc(JDStatusBarNotificationFullWidthStyle)
+public class StatusBarNotificationFullWidthStyle: NSObject {
+    /// The height of the pill. Default is `50.0`.
+    @objc public var height: Double = 50.0
+}
+
 /// Defines the appearance of the notification background.
 @objc(JDStatusBarNotificationBackgroundStyle)
 public class StatusBarNotificationBackgroundStyle: NSObject {
@@ -316,6 +323,9 @@ public class StatusBarNotificationBackgroundStyle: NSObject {
 
     /// Defines the appearance of the pill, when using ``StatusBarNotificationBackgroundType/pill``
     @objc public var pillStyle = StatusBarNotificationPillStyle()
+    
+    /// Defines the appearance of the pill, when using ``StatusBarNotificationBackgroundType/FullWidth``
+    @objc public var fullWidthStyle = StatusBarNotificationFullWidthStyle()
 }
 
 /// Defines the appearance of the progress bar.
